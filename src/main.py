@@ -7,11 +7,11 @@ from sys import exit
 TEMP_FILE_NAME = ".tmp"
 MERGED_FILE_NAME = "merged.vcf"
 
-def print_file_exists(filename):
-  print("A file named \"" + filename + "\" already exists in this folder!")
+def get_file_exists_string(filename):
+  return "A file named \"" + filename + "\" already exists in this folder!"
 
-if isfile(MERGED_FILE_NAME): exit(print_file_exists(MERGED_FILE_NAME))
-if isfile(TEMP_FILE_NAME): exit(print_file_exists(TEMP_FILE_NAME))
+if isfile(MERGED_FILE_NAME): exit(get_file_exists_string(MERGED_FILE_NAME))
+if isfile(TEMP_FILE_NAME): exit(get_file_exists_string(TEMP_FILE_NAME))
 
 contact_files = glob("*.vcf")
 
